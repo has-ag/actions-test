@@ -25,6 +25,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3"
   },
+  "engines": {
+    "node": ">=18.17"
+  },
   "jest": {
     "testEnvironment": "jsdom",
     "rootDir": "./",

@@ -34,6 +34,6 @@ RUN npm install
 
 EXPOSE 3000
 EXPOSE 3001
-EXPOSE 80
+EXPOSE 8080
 
 CMD npm start
