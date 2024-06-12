@@ -6,7 +6,6 @@ WORKDIR /app
 
 COPY package.json .
 COPY next.config.js .
-COPY api-server.js .
 COPY .env.local .
 
 RUN npm install
@@ -27,7 +26,6 @@ WORKDIR /app
 
 COPY --from=build /app/package.json .
 COPY --from=build /app/next.config.js .
-COPY --from=build /app/api-server.js .
 COPY --from=build /app/.env.local .
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
@@ -36,6 +34,6 @@ RUN npm install
 
 EXPOSE 3000
 EXPOSE 3001
-EXPOSE 8080
+EXPOSE 80
 
 CMD npm start
